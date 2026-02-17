@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Hebert Paes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>.glass{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);}</style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-md w-full">
+        <div class="text-center mb-8">
+            <a href="index.html" class="text-4xl font-bold text-white">HP<span class="text-blue-400">.</span></a>
+            <p class="text-gray-400 mt-2">Acesse sua conta</p>
+        </div>
+        <div class="glass rounded-2xl p-8 border border-white/10">
+            <form onsubmit="event.preventDefault();window.location.href='admin.html';">
+                <div class="mb-6">
+                    <label class="block text-gray-300 text-sm mb-2"><i class="fas fa-envelope mr-2"></i>Email</label>
+                    <input type="email" required placeholder="seu@email.com" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-300 text-sm mb-2"><i class="fas fa-lock mr-2"></i>Senha</label>
+                    <input type="password" required placeholder="********" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="flex items-center justify-between mb-6">
+                    <label class="flex items-center text-gray-300 text-sm"><input type="checkbox" class="mr-2">Lembrar-me</label>
+                    <a href="#" class="text-blue-400 text-sm hover:text-blue-300">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold mb-4"><i class="fas fa-sign-in-alt mr-2"></i>Entrar</button>
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm">Ou entre com</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <button type="button" class="bg-white/5 hover:bg-white/10 text-white p-3 rounded-lg"><i class="fab fa-google"></i></button>
+                        <button type="button" class="bg-white/5 hover:bg-white/10 text-white p-3 rounded-lg"><i class="fab fa-github"></i></button>
+                        <button type="button" class="bg-white/5 hover:bg-white/10 text-white p-3 rounded-lg"><i class="fab fa-linkedin"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <p class="text-center text-gray-400 mt-6"><a href="index.html" class="text-blue-400 hover:text-blue-300"><i class="fas fa-arrow-left mr-2"></i>Voltar ao site</a></p>
+    </div>
+</body>
+</html>

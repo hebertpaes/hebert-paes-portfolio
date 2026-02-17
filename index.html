@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hebert Paes - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .dropdown:hover .dropdown-menu { display: block; }
+        .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
+        .hover-scale:hover { transform: scale(1.05); transition: 0.3s; }
+        .fade-in { animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 min-h-screen">
+    <div id="notification" class="fixed top-5 right-5 z-50 hidden">
+        <div class="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg"><i class="fas fa-check-circle mr-2"></i><span id="notif-text"></span></div>
+    </div>
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-2xl font-bold text-white">HP<span class="text-blue-400">.</span></a>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="text-gray-300 hover:text-white px-3 py-2">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white px-3 py-2">Sobre</a>
+                    <div class="dropdown relative">
+                        <button class="text-gray-300 hover:text-white px-3 py-2 flex items-center">Servicos <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                        <div class="dropdown-menu hidden absolute left-0 mt-2 w-48 glass rounded-md border border-white/10">
+                            <a href="#web-dev" class="block px-4 py-2 text-gray-300 hover:bg-white/10"><i class="fas fa-code mr-2"></i>Web Dev</a>
+                            <a href="#cloud" class="block px-4 py-2 text-gray-300 hover:bg-white/10"><i class="fas fa-cloud mr-2"></i>Cloud</a>
+                            <a href="#api" class="block px-4 py-2 text-gray-300 hover:bg-white/10"><i class="fas fa-plug mr-2"></i>API</a>
+                        </div>
+                    </div>
+                    <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2">Projetos</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white px-3 py-2">Contato</a>
+                    <div class="dropdown relative">
+                        <button class="text-gray-300 hover:text-white px-3 py-2"><i class="fas fa-user-circle"></i> <i class="fas fa-chevron-down text-xs"></i></button>
+                        <div class="dropdown-menu hidden absolute right-0 mt-2 w-48 glass rounded-md border border-white/10">
+                            <a href="admin.html" class="block px-4 py-2 text-gray-300 hover:bg-white/10"><i class="fas fa-tachometer-alt mr-2"></i>Admin</a>
+                            <a href="login.html" class="block px-4 py-2 text-gray-300 hover:bg-white/10"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/10 px-4 py-3">
+            <a href="#home" class="block py-2 text-gray-300">Home</a>
+            <a href="#about" class="block py-2 text-gray-300">Sobre</a>
+            <a href="#projects" class="block py-2 text-gray-300">Projetos</a>
+            <a href="#contact" class="block py-2 text-gray-300">Contato</a>
+            <hr class="border-white/10 my-2">
+            <a href="admin.html" class="block py-2 text-blue-400"><i class="fas fa-tachometer-alt mr-2"></i>Admin</a>
+            <a href="login.html" class="block py-2 text-blue-400"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+        </div>
+    </nav>
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-16">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <img src="https://ui-avatars.com/api/?name=HP&size=150&background=3b82f6&color=fff&rounded=true" class="mx-auto rounded-full border-4 border-blue-500 mb-6 hover-scale">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Hebert Paes</h1>
+            <p class="text-xl text-blue-300 mb-4">Full Stack Developer & Cloud Architect</p>
+            <p class="text-gray-300 mb-8">Construindo aplicacoes web modernas com Next.js, React e Azure</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg"><i class="fas fa-folder-open mr-2"></i>Projetos</a>
+                <a href="#contact" class="border-2 border-blue-600 hover:bg-blue-600 text-white px-8 py-3 rounded-lg"><i class="fas fa-envelope mr-2"></i>Contato</a>
+            </div>
+            <div class="mt-8 flex justify-center gap-6">
+                <a href="https://github.com/hebertpaes" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/hebertpaes" class="text-gray-400 hover:text-blue-400 text-2xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-8 text-center"><i class="fas fa-user mr-3 text-blue-400"></i>Sobre Mim</h2>
+            <div class="glass rounded-2xl p-8 border border-white/10">
+                <p class="text-gray-200 mb-6">Desenvolvedor especializado em aplicacoes web escalaveis com React, Next.js, TypeScript e Azure.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white/5 p-4 rounded-lg text-center hover-scale"><i class="fab fa-react text-3xl text-blue-400"></i><p class="text-blue-400 mt-2">React</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg text-center hover-scale"><i class="fab fa-node-js text-3xl text-green-400"></i><p class="text-green-400 mt-2">Node.js</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg text-center hover-scale"><i class="fab fa-microsoft text-3xl text-blue-500"></i><p class="text-blue-500 mt-2">Azure</p></div>
+                    <div class="bg-white/5 p-4 rounded-lg text-center hover-scale"><i class="fab fa-js text-3xl text-yellow-400"></i><p class="text-yellow-400 mt-2">TypeScript</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-12 text-center"><i class="fas fa-cogs mr-3 text-blue-400"></i>Servicos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div id="web-dev" class="glass rounded-2xl p-6 border border-white/10 hover-scale"><i class="fas fa-code text-4xl text-blue-400 mb-4"></i><h3 class="text-xl font-bold text-white mb-2">Web Dev</h3><p class="text-gray-300">Apps modernas com React e Next.js</p></div>
+                <div id="cloud" class="glass rounded-2xl p-6 border border-white/10 hover-scale"><i class="fas fa-cloud text-4xl text-blue-400 mb-4"></i><h3 class="text-xl font-bold text-white mb-2">Cloud</h3><p class="text-gray-300">Azure, AWS e GCP</p></div>
+                <div class="glass rounded-2xl p-6 border border-white/10 hover-scale"><i class="fas fa-lightbulb text-4xl text-yellow-400 mb-4"></i><h3 class="text-xl font-bold text-white mb-2">Consultoria</h3><p class="text-gray-300">Otimizacao de sistemas</p></div>
+                <div id="api" class="glass rounded-2xl p-6 border border-white/10 hover-scale"><i class="fas fa-plug text-4xl text-green-400 mb-4"></i><h3 class="text-xl font-bold text-white mb-2">APIs</h3><p class="text-gray-300">REST e GraphQL</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-12 text-center"><i class="fas fa-folder-open mr-3 text-blue-400"></i>Projetos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass rounded-2xl p-6 border border-white/10 hover-scale"><div class="bg-gradient-to-r from-blue-600 to-purple-600 h-32 rounded-lg mb-4 flex items-center justify-center"><i class="fas fa-shopping-cart text-4xl text-white"></i></div><h3 class="text-xl font-bold text-white mb-2">E-Commerce</h3><p class="text-gray-300 mb-4">Next.js + Azure</p><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Next.js</span></div>
+                <div class="glass rounded-2xl p-6 border border-white/10 hover-scale"><div class="bg-gradient-to-r from-green-600 to-teal-600 h-32 rounded-lg mb-4 flex items-center justify-center"><i class="fas fa-chart-line text-4xl text-white"></i></div><h3 class="text-xl font-bold text-white mb-2">Dashboard</h3><p class="text-gray-300 mb-4">React + Node.js</p><span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">React</span></div>
+                <div class="glass rounded-2xl p-6 border border-white/10 hover-scale"><div class="bg-gradient-to-r from-purple-600 to-pink-600 h-32 rounded-lg mb-4 flex items-center justify-center"><i class="fas fa-user text-4xl text-white"></i></div><h3 class="text-xl font-bold text-white mb-2">Portfolio</h3><p class="text-gray-300 mb-4">Tailwind + Azure</p><span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">Tailwind</span></div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-8 text-center"><i class="fas fa-envelope mr-3 text-blue-400"></i>Contato</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass rounded-2xl p-8 border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-6">Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4"><div class="bg-blue-600 p-3 rounded-lg"><i class="fas fa-envelope text-white"></i></div><a href="mailto:contact@hebertpaes.com" class="text-blue-400">contact@hebertpaes.com</a></div>
+                        <div class="flex items-center gap-4"><div class="bg-blue-600 p-3 rounded-lg"><i class="fab fa-linkedin text-white"></i></div><a href="https://linkedin.com/in/hebertpaes" class="text-blue-400">linkedin.com/in/hebertpaes</a></div>
+                        <div class="flex items-center gap-4"><div class="bg-blue-600 p-3 rounded-lg"><i class="fab fa-github text-white"></i></div><a href="https://github.com/hebertpaes" class="text-blue-400">github.com/hebertpaes</a></div>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-8 border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-6">Mensagem</h3>
+                    <form onsubmit="event.preventDefault();showNotif('Enviado!');this.reset();">
+                        <input type="text" placeholder="Nome" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white mb-4">
+                        <input type="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white mb-4">
+                        <textarea placeholder="Mensagem" rows="3" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white mb-4"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"><i class="fas fa-paper-plane mr-2"></i>Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-8 text-center border-t border-white/10">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://github.com/hebertpaes" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/hebertpaes" class="text-gray-400 hover:text-blue-400 text-xl"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-gray-400">2026 Hebert Paes</p>
+    </footer>
+    <script>
+        function showNotif(msg){const n=document.getElementById('notification');document.getElementById('notif-text').textContent=msg;n.classList.remove('hidden');setTimeout(()=>n.classList.add('hidden'),3000);}
+        document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});}));
+    </script>
+</body>
+</html>
